@@ -1,0 +1,71 @@
+.page-header {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.05);
+
+  @include tablet {
+    height: 68px;
+  }
+
+  @include mob {
+    padding-top: 26px;
+    height: auto;
+    box-shadow: none;
+  }
+}
+
+.page-header__nav {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+
+  @include tablet {
+    font-size: 14px;
+  }
+}
+
+.page-header__nav-item {
+  margin: 0 31px 0 0;
+  padding-top: 3px;
+
+  &:last-child {
+    margin: 0 92px 0 auto;
+    padding-left: 28px;
+    font-size: 18px;
+    font-weight: 600;
+    background: url(../../assets/images/hand.svg) 0 6px no-repeat;
+  }
+
+  @include tablet {
+    margin: 0 20px 0 auto;
+
+    &:last-child {
+      margin: 0;
+      font-size: 14px;
+    }
+  }
+
+  @include mob {
+    display: none;
+  }
+}
+
+.page-header__nav-item--brand {
+  padding: 0;
+  margin: 0 164px 0 0;
+
+  @include tablet {
+    width: 142px;
+    margin: 0 30px 0 0;
+  }
+
+  @include mob {
+    display: block;
+    width: 218px;
+  }
+
+  img {
+    width: 100%;
+  }
+}

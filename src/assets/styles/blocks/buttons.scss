@@ -1,0 +1,33 @@
+.btn {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  height: 50px;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: $color3;
+  border: none;
+  color: $color2;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s;
+  fill: currentColor;
+
+  &:hover {
+    background-color: $color4;
+    color: $color2;
+  }
+}
+
+.btn--secondary {
+  border: 2px solid $color3;
+  background-color: transparent;
+  color: $color3;
+
+  &:hover {
+    background-color: $color3;
+    color: $color2;
+  }
+}

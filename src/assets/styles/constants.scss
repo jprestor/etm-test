@@ -1,0 +1,48 @@
+/* Variables */
+$color1: #333333;
+$color2: #fff;
+$color3: #00a4f7;
+$color4: #128ace;
+$color5: #adadad;
+$color6: #fff2c3;
+$color7: #ea4f24;
+$color8: #faf9fa;
+$color9: #dadada;
+
+/* Mixins */
+// responsive
+@mixin tablet {
+  @media (max-width: 1480px) {
+    @content;
+  }
+}
+
+@mixin mob {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin media($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}

@@ -1,0 +1,31 @@
+.title {
+  margin: 0 0 20px;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 120%;
+
+  &--main {
+    margin: 0 0 30px;
+    font-weight: 800;
+    font-size: 54px;
+  }
+
+  &--bigger {
+    font-size: 48px;
+  }
+
+  @include mob {
+    margin: 0 0 15px;
+    font-size: 26px;
+
+    &--main {
+      margin: 0 0 22px;
+      font-weight: 700;
+      font-size: 32px;
+    }
+
+    &--bigger {
+      font-size: 30px;
+    }
+  }
+}
