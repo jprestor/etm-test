@@ -5,3 +5,4 @@ dist/
 yarn-error.log
 snippets.json
 *.code-workspace
+yarn.lock
