@@ -1,4 +1,7 @@
-import { DataService } from './data-service';
-import { DataServiceContext, DataServiceProvider } from './context';
+import { NewsServiceContext, NewsServiceProvider } from './context';
 
-export { DataService, DataServiceContext, DataServiceProvider };
+import NewsService from './news-service';
+import LoginService from './login-service';
+
+
+export { NewsServiceContext, NewsServiceProvider, NewsService, LoginService }

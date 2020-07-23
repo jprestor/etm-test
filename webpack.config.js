@@ -1,8 +1,6 @@
-// const path = require('path');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-  .BundleAnalyzerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = (env = {}) => {
   const { mode = 'development' } = env;
@@ -25,17 +23,19 @@ module.exports = (env = {}) => {
   const getPlugins = () => {
     const plugins = [
       new HtmlWebpackPlugin({
-        title: 'ReactApp',
+        title: 'MusicCart',
         template: 'public/index.html',
+      }),
+      new CopyPlugin({
+        patterns: [{ from: 'public/data.json', to: './assets/data/' }],
       }),
     ];
 
     if (isProd) {
       plugins.push(
-        new BundleAnalyzerPlugin(),
         new MiniCssExtractPlugin({
           filename: 'main-[hash:8].css',
-        }),
+        })
       );
     }
 
@@ -44,24 +44,16 @@ module.exports = (env = {}) => {
 
   return {
     mode: isProd ? 'production' : isDev && 'development',
+
     output: {
       filename: isProd ? 'main-[hash:8].js' : undefined,
     },
-    resolve: { extensions: ['.js', '.ts', '.tsx'] },
-
-    devServer: {
-      open: true, // автоматически открывает браузер
-    },
-
-    devtool: isDev ? 'eval-cheap-source-map' : undefined,
-
-    plugins: getPlugins(),
 
     module: {
       rules: [
         // Loading JS
         {
-          test: /\.(js|ts|tsx)$/,
+          test: /\.js$/,
           exclude: /node_modules/,
           loader: 'babel-loader',
         },
@@ -78,13 +70,6 @@ module.exports = (env = {}) => {
                 sourceMap: true,
               },
             },
-            {
-              loader: 'sass-resources-loader',
-              options: {
-                // Provide path to the file with resources
-                resources: './src/assets/styles/constants.scss',
-              },
-            },
           ],
         },
 
@@ -96,33 +81,13 @@ module.exports = (env = {}) => {
 
         // Loading Images
         {
-          test: /\.(png|jpg|jpeg|svg|gif)$/,
+          test: /\.(png|jpg|jpeg|gif)$/,
           use: [
             {
               loader: 'file-loader',
               options: {
                 outputPath: 'assets/images',
                 name: '[name]-[sha1:hash:7].[ext]',
-              },
-            },
-            {
-              loader: 'image-webpack-loader',
-              options: {
-                mozjpeg: {
-                  progressive: true,
-                  quality: 65,
-                },
-                // optipng.enabled: false will disable optipng
-                optipng: {
-                  enabled: false,
-                },
-                pngquant: {
-                  quality: [0.65, 0.9],
-                  speed: 4,
-                },
-                gifsicle: {
-                  interlaced: false,
-                },
               },
             },
           ],
@@ -143,5 +108,13 @@ module.exports = (env = {}) => {
         },
       ],
     },
+
+    plugins: getPlugins(),
+
+    devServer: {
+      open: true, // автоматически открывает браузер
+    },
+
+    devtool: 'eval-cheap-source-map',
   };
 };

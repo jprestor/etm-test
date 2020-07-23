@@ -1,4 +1,7 @@
 ﻿node_modules/
 build/
 dist/
+.prettierrc.json
+yarn-error.log
+snippets.json
 *.code-workspace

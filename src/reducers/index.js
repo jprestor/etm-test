@@ -1,37 +1,11 @@
-const reducer = (stat, action) => {
-  if (state === undefined) {
-    return {
-      data: null,
-      loading: true,
-      error: null,
-    };
+import updateNews from './updateNews';
+import updateLogin from './updateLogin';
+
+const reducer = (state, action) => {
+  return {
+    news: updateNews(state, action),
+    login: updateLogin(state, action)
   }
+}
 
-  switch (action.type) {
-    case 'FETCH_DATA_REQUEST':
-      return {
-        data: null,
-        loading: true,
-        error: null,
-      };
-
-    case 'FETCH_DATA_SUCCESS':
-      return {
-        data: action.payload,
-        loading: false,
-        error: null,
-      };
-
-    case 'FETCH_DATA_FAILURE':
-      return {
-        data: null,
-        loading: false,
-        error: action.payload,
-      };
-
-    default:
-      return state;
-  }
-};
-
-export { reducer };
+export default reducer;

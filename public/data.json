@@ -1,0 +1,82 @@
+[
+  {
+    "id": "00001",
+    "title": "Автоматический выключатель 10A",
+    "vendor": "ABB",
+    "pack": "1",
+    "price": "1500",
+    "image": "https://i8.rozetka.ua/goods/14143701/124477741_images_14143701715._S.jpg"
+  },
+  {
+    "id": "00002",
+    "title": "Автоматический выключатель 20A",
+    "vendor": "ABB",
+    "pack": "1",
+    "price": "1500",
+    "image": "https://ozon-st.cdn.ngenix.net/multimedia/1023802067.jpg"
+  },
+  {
+    "id": "00003",
+    "title": "Корпус металлический",
+    "vendor": "ABB",
+    "pack": "1",
+    "price": "6800",
+    "image": "https://www.kdmsteel.com/wp-content/uploads/2019/11/c-metal-enclosure.jpg"
+  },
+  {
+    "id": "00004",
+    "title": "Корпус пластиковый",
+    "vendor": "IEK",
+    "pack": "1",
+    "price": "1200",
+    "image": "http://s14.buyreklama.ru/brjansk/pic_800_600/72554685/6687422713e24854e120c2678a059fed.jpg"
+  },
+  {
+    "id": "00005",
+    "title": "Шина медная МТ 60х8",
+    "vendor": "DKC",
+    "pack": "1",
+    "price": "1200",
+    "image": "https://volgograd.asmetalloprokat.ru/uploads/2017/11/SHina-mednaya-60h8-mm-SHMM-GOST-434-78-l4m.jpg"
+  },
+  {
+    "id": "00006",
+    "title": "DLP Кабель-канал 105x50",
+    "vendor": "DKC",
+    "pack": "1",
+    "price": "350",
+    "image": "http://elektron44.ru/i/p/12122012/25046-1l.jpg"
+  },
+  {
+    "id": "00007",
+    "title": "DLP Кабель-канал 80x50",
+    "vendor": "DKC",
+    "pack": "1",
+    "price": "300",
+    "image": "https://legrand-ufa.ru/image/cache/data/mx/kabelenesushie-sistemy/02ddd946_d8a4_11dd_ace8_000ea69c262d-800x800.jpg"
+  },
+  {
+    "id": "00008",
+    "title": "ЭТЮД Выключатель одноклавишный",
+    "vendor": "Schneider Electric",
+    "pack": "1",
+    "price": "85",
+    "image": "https://cs.petrovich.ru/images/41182/original.jpg"
+  },
+  {
+    "id": "00009",
+    "title": "Контактор E 12А катушка управления 220В",
+    "vendor": "Schneider Electric",
+    "pack": "1",
+    "price": "3800",
+    "image": "http://moytok.com/image/cache/catalog/newfoto/1056278/152111640215-500x500.jpg"
+  },
+  {
+    "id": "00010",
+    "title": "Лоток для систем освещения",
+    "vendor": "Schneider Electric",
+    "pack": "1",
+    "price": "1859",
+    "image": "https://www.el-com.ru/upload/iblock/b4c/e0e4d65d4054763ff9b6f9e96ab71f22.png"
+  }
+]

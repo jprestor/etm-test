@@ -1,0 +1,25 @@
+.news-list__layout {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px 10px;
+}
+
+.news-list__item {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 15px 30px;
+  padding: 20px;
+
+  img {
+    max-width: 200px;
+  }
+
+  .card-body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+}

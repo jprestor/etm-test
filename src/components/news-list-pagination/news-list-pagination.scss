@@ -1,0 +1,16 @@
+.news-list__pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news-list__pagination-item {
+  margin-right: 12px;
+  cursor: pointer;
+
+  &.is-active {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

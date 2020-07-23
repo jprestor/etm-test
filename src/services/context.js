@@ -1,7 +1,6 @@
 import React from 'react';
 
-const DataServiceContext = React.createContext();
+const NewsServiceContext = React.createContext();
+const { Provider: NewsServiceProvider } = NewsServiceContext;
 
-const { Provider: DataServiceProvider } = DataServiceContext;
-
-export { DataServiceContext, DataServiceProvider };
+export { NewsServiceContext, NewsServiceProvider };

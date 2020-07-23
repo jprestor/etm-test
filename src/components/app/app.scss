@@ -1,0 +1,53 @@
+html,
+body,
+#root {
+  height: 100%;
+  font-size: 16px;
+
+  @media (max-width: 991px) {
+    flex-direction: column-reverse;
+    font-size: 14px;
+  }
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-main {
+  padding: 40px 15px 70px;
+  flex-grow: 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 3rem;
+
+  &.main-page-title {
+    font-size: 3.5rem;
+  }
+}
+
+.title-line {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 40px;
+
+  h2 {
+    margin: -2px 35px 0 0;
+  }
+}
+
+img {
+  margin: 0 auto;
+  height: auto;
+}
